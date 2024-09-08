@@ -16,21 +16,10 @@ function App(){
   },[])
  
 
-  // useEffect(()=>{
-  //   axios("https://the-trivia-api.com/v2/users")
-  //   .then((res)=>{
-  //     console.log(res);
-  //   })
-  //   .catch((err)=>{
-  //     console.log(err);
-  //   })  
-  // },[])
-
   
   return(
     <>
     <h1>Quiz App</h1>
-    <h1>{setData.question}</h1>
     </>
   )
 }
