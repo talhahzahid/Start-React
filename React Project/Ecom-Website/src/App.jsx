@@ -28,7 +28,14 @@ const App = () => {
            <Card src={item.image} title= {item.category} price={item.price} description={item.description}/>
     </div> 
    )
-      }):<h1>Loading</h1>
+      }):<div class="flex items-center justify-center min-h-screen">
+      <div>
+        <span class="loading loading-bars loading-xs"></span>
+        <span class="loading loading-bars loading-sm"></span>
+        <span class="loading loading-bars loading-md"></span>
+        <span class="loading loading-bars loading-lg"></span>
+      </div>
+    </div>
     }
     </>
   )
