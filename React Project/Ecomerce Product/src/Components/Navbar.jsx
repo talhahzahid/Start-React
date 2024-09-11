@@ -27,7 +27,8 @@ function ResponsiveAppBar() {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (page) => {
+    console.log(page)
     setAnchorElNav(null);
   };
 
@@ -115,7 +116,7 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={()=>handleCloseNavMenu(page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
@@ -128,7 +129,7 @@ function ResponsiveAppBar() {
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
-            {/* <Menu
+            <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -149,7 +150,7 @@ function ResponsiveAppBar() {
                   <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
                 </MenuItem>
               ))}
-            </Menu> */}
+            </Menu>
           </Box>
         </Toolbar>
       </Container>
