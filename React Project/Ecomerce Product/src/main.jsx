@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         element : <Contact />
       },
       {
-        path : 'singleproduct',
+        path : 'singleproduct/:id',
         element : <Singleproduct />
       },
       {

@@ -55,8 +55,7 @@ import React, { useEffect, useState } from 'react';
 import MultiActionAreaCard from '../Components/Card';
 
 const Home = () => {
-  const [data, setData] = useState(null);
-
+  const [data, setData] = useState(null);  
   useEffect(() => {
     axios('https://fakestoreapi.com/products')
       .then((res) => {
@@ -84,7 +83,7 @@ const Home = () => {
       >
         {data ? (
           data.map((item) => (
-            <Box key={item._id} sx={{ flex: '1 1 300px' }}>
+            <Box key={item.id} sx={{ flex: '1 1 300px' }}>
               <MultiActionAreaCard
                 items={item}
                 image={item.image}

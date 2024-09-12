@@ -6,10 +6,14 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
+import { useNavigate } from 'react-router-dom';
 
-export default function MultiActionAreaCard({image,title,price}) {
+export default function MultiActionAreaCard({image,title,price,items}) {
+
+     const navigate = useNavigate()
     const singleProduct = () =>{
-   console.log();
+   console.log(items);
+   navigate (`/singleproduct/ ${items.id}`)
    
     }
   return (
